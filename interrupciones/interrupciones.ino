@@ -1,3 +1,7 @@
+/* Como utilizar interrupciones.
+ * Rafael Lozano Rolon
+ * soporte@taloselectronics.com
+ */
 const int PROCESO_1 = 1;
 const int PROCESO_2 = 2;
 const int PROCESO_3 = 3;
