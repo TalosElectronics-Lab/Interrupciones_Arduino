@@ -2,7 +2,7 @@ const int PROCESO_1 = 1;
 const int PROCESO_2 = 2;
 const int PROCESO_3 = 3;
 const int TIEMPO_ESPERA=1000;
-const int VENTANA=1000;
+const int VENTANA=250;
 
 const byte boton=2;
 const byte led_rojo = 3;
@@ -23,6 +23,7 @@ void setup()
 }
 void loop()
 {
+    
     switch (menu)
     {
     
@@ -51,6 +52,11 @@ void loop()
       defaultAnimation();
       break;
     }
+    if (menu>PROCESO_3)
+    {
+        menu=0;
+    }
+    
     
 }
 void interrupcion()
