@@ -2,7 +2,7 @@ const int PROCESO_1 = 1;
 const int PROCESO_2 = 2;
 const int PROCESO_3 = 3;
 const int TIEMPO_ESPERA=1000;
-const int VENTANA=200;
+const int VENTANA=1000;
 
 const byte boton=2;
 const byte led_rojo = 3;
@@ -48,21 +48,8 @@ void loop()
         break;
 
     default:
-        digitalWrite(led_verde, HIGH);
-        delay(200);
-        digitalWrite(led_verde, LOW);
-        delay(200);
-
-        digitalWrite(led_amarillo, HIGH);
-        delay(200);
-        digitalWrite(led_amarillo, LOW);
-        delay(200);
-
-        digitalWrite(led_rojo, HIGH);
-        delay(200);
-        digitalWrite(led_rojo, LOW);
-        delay(200);
-        break;
+      defaultAnimation();
+      break;
     }
     
 }
@@ -73,4 +60,21 @@ void interrupcion()
         menu++;
         Time = millis();
     }
+}
+void defaultAnimation()
+{
+  digitalWrite(led_verde, HIGH);
+  delay(200);
+  digitalWrite(led_verde, LOW);
+  delay(200);
+
+  digitalWrite(led_amarillo, HIGH);
+  delay(200);
+  digitalWrite(led_amarillo, LOW);
+  delay(200);
+
+  digitalWrite(led_rojo, HIGH);
+  delay(200);
+  digitalWrite(led_rojo, LOW);
+  delay(200);
 }
